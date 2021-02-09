@@ -1,8 +1,10 @@
 # @Author: Bluzy
 # @Date  : 2021/02/09 Tue
+
 import pygame
 import traceback
 import sys
+import Dominoes
 
 from pygame.constants import QUIT
 
@@ -10,13 +12,17 @@ from pygame.constants import QUIT
 pygame.init()
 pygame.mixer.init()
 
-bg_size = width,height = 480,700
+bg_size = width,height = 480,640
 screen = pygame.display.set_mode(bg_size)
-pygame.display.set_caption("catch 5")
+pygame.display.set_caption("RDR_5")
 
+def __init__():
+    c = Dominoes.Dominoes(screen, (100, 100, 45, 100))
+    c.draw()
 def main():
     running = True
     while running:
+        __init__()
         # Event listener
         for event in pygame.event.get():
             # Quit game
