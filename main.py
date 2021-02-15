@@ -4,9 +4,13 @@
 import pygame
 import traceback
 import sys
+import random
 import Dominoes
+import settings
+import game
 
 from pygame.constants import QUIT
+from pygame.locals import *
 
 # init
 pygame.init()
